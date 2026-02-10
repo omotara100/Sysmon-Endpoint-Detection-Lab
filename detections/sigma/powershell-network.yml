@@ -1,1 +1,13 @@
+title: PowerShell Outbound Network Connection
+id: 8c8a6e42-dddd-eeee-ffff-098765432111
+status: experimental
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    Image|contains: 'powershell.exe'
+  condition: selection
+level: medium
 
