@@ -1,1 +1,13 @@
+title: Nmap Network Scanning via Sysmon
+id: 9b9a6e42-aaaa-bbbb-cccc-123456789000
+status: experimental
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    Image|endswith: '\nmap.exe'
+  condition: selection
+level: high
 
