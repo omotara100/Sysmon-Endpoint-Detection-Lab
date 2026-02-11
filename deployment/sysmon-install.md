@@ -1,8 +1,8 @@
 # Sysmon Installation
 
-## Command Used
+## Objective
+Install Sysmon on a Windows endpoint to enable detailed process and network telemetry.
+
+## Command Executed
+```powershell
 .\Sysmon64.exe -accepteula -i sysmonconfig.xml
-
-## Outcome
-Sysmon installed successfully and logging endpoint activity.
-
