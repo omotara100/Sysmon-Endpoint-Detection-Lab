@@ -1,13 +1,18 @@
-title: Nmap Network Scanning via Sysmon
-id: 9b9a6e42-aaaa-bbbb-cccc-123456789000
+title: Suspicious Network Activity via Sysmon
+id: 11111111-2222-3333-4444-555555555555
 status: experimental
+description: Detects suspicious network activity from non-browser processes
 logsource:
   product: windows
   service: sysmon
 detection:
   selection:
     EventID: 3
-    Image|endswith: '\nmap.exe'
+    Image|contains:
+      - powershell.exe
+      - nmap.exe
+      - nc.exe
   condition: selection
+falsepositives:
+  - Administrative troubleshooting
 level: high
-
