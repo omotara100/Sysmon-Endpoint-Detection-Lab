@@ -1,13 +1,15 @@
 title: PowerShell Outbound Network Connection
-id: 8c8a6e42-dddd-eeee-ffff-098765432111
+id: 66666666-7777-8888-9999-000000000000
 status: experimental
+description: Detects PowerShell making outbound network connections
 logsource:
   product: windows
   service: sysmon
 detection:
   selection:
     EventID: 3
-    Image|contains: 'powershell.exe'
+    Image|contains: powershell.exe
   condition: selection
+falsepositives:
+  - Legitimate administrative scripts
 level: medium
-
