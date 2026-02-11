@@ -1,12 +1,18 @@
-# Nmap Detection (T1046)
+# Nmap Network Scan Investigation
+
+## MITRE ATT&CK
+- T1046 – Network Service Scanning
 
 ## Activity
-Nmap scan from Kali to Windows endpoint.
+Nmap scan executed from Kali Linux against Windows endpoint.
 
 ## Evidence
 - Sysmon Event ID 3
-- Multiple destination ports
+- Multiple inbound connections across many ports
+- Repeated connection attempts from a single source IP
+
+## Analyst Assessment
+This activity matches reconnaissance behavior commonly seen before exploitation.
 
 ## Conclusion
-Network scanning activity successfully detected.
-
+Network scanning behavior successfully detected.
